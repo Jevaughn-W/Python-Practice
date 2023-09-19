@@ -1,8 +1,12 @@
 # Given an list of dictionary containing instructors, identify the instructor with the longest name
 
 def instructorWithLongestName(instructors):
-  # Put your solution here
-  return None
+  result = 0
+  for instructor in instructors:
+    if len(instructor["name"]) > result:
+      result = len(instructor["name"])
+
+  return result
 
 print(
   instructorWithLongestName([
@@ -19,3 +23,9 @@ print(
     { "name": "Domascus", "course": "Web" },
   ])
 )
+
+# Create a variable to count the size of the instructor name
+# Use a for loop to iterate through the array of objects
+# Use the key value to acess the name and check the length of the string using the Len function
+# If the value is larger that the value in the counter replace it
+# At the end of the loop return the the count
