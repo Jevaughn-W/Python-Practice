@@ -2,9 +2,13 @@
 
 
 def urlEncode(text):
-  # for char in text:
-  #   print(char)
-  return None
+  result = []
+  for char in text:
+    if char == " ":
+      result.append("%20")
+    else:
+      result.append(char)
+  return "".join(result)
 
 
 print(urlEncode("Lighthouse Labs"))
