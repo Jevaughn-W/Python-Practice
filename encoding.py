@@ -3,12 +3,14 @@
 
 def urlEncode(text):
   result = []
-  for char in text:
+
+
+  for char in text.strip():  # Built in python trim spaces - maybe could try to implement in a refactor
     if char == " ":
       result.append("%20")
     else:
       result.append(char)
-  return "".join(result)
+  return "".join(result) # Function that join the list is no spaces or characters
 
 
 print(urlEncode("Lighthouse Labs"))
